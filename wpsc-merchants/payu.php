@@ -72,7 +72,7 @@ function gateway_payu($separator, $sessionid)
 					'ORDER_QTY' => $d['ORDER_QTY'], #array( 1 ), # Array with data of counts of each goods 
 					'ORDER_VAT' => $d['ORDER_VAT'], #array( 0 ), # Array with VAT of each goods
 					'ORDER_SHIPPING' => $d['ORDER_SHIPPING'], #array( 0.1 ), # Shipping cost
-					'PRICES_CURRENCY' => $data['price_currency'],  #"UAH"  # Currency
+					'PRICES_CURRENCY' => $data['price_currency'],  #"RUB"  # Currency
 					'LANGUAGE' => $data['language']
 				  );
 	if ( $data['backref'] != false ) $forSend['BACK_REF'] = $data['backref'];
@@ -294,11 +294,11 @@ function getCells()
 				'payu_lu_url' => array(  
 										"en-US" => array(
 													'name' => 'System url',
-													'subText' => 'URL for LU(Live Update) <br> Default url - https://secure.payu.ua/order/lu.php'
+													'subText' => 'URL for LU(Live Update) <br> Default url - https://secure.payu.ru/order/lu.php'
 													),
 										"ru-RU" => array(
 													'name' => 'Ссылка на PayU (Live Update)',
-													'subText' => 'По умолчанию - https://secure.payu.ua/order/lu.php'
+													'subText' => 'По умолчанию - https://secure.payu.ru/order/lu.php'
 													),
 										'isInput' => true,
 										'code' => ""
@@ -306,11 +306,11 @@ function getCells()
 				'payu_price_currency' => array(  
 										"en-US" => array(
 													'name' => 'Currency of payment',
-													'subText' => 'Default currency - UAH'
+													'subText' => 'Default currency - RUB'
 													),
 										"ru-RU" => array(
 													'name' => 'Валюта платежей',
-													'subText' => 'По умолчанию - UAH. <br> Валюта должна совпадать с валютой мерчанта.'
+													'subText' => 'По умолчанию - RUB. <br> Валюта должна совпадать с валютой мерчанта.'
 													),
 										'isInput' => true,
 										'code' => ""
